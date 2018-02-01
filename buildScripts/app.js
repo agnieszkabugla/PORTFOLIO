@@ -30,8 +30,6 @@ app.listen(port, function (err) {
     if(err) {
         console.log(err); 
     } else {
-        //open('http://localhost:' + port, "chrome"); 
-        //open('https://www.wp.pl', 'chrome'); 
         console.log('server is running, PORT ' + port);
     }   
 });

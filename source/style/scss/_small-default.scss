@@ -24,6 +24,181 @@ To prevent this, we will add the style that clears the flow. */
     padding: 15px; 
 }
 
-p {
-    font-size: 10rem; 
+
+* {
+    font-size: 16px; 
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#gutter {
+    margin-left: 2%;
+    margin-right: 2%; 
+}
+
+body {
+    background-image: url(../photos/background520.jpg); 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+/* -------------------------------NAVBAR-------------------------------*/
+
+  /* header */
+  
+  .header {
+    background-color: $grey; 
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    a {
+        color: $white; 
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: $grey;
+    }
+    li a {
+        display: block;
+        padding: 30px 30px;
+        text-align: center; 
+        font-size: 2.8rem;
+        font-weight: 400; 
+        text-decoration: none;
+        &:hover {
+            color: $magenta; 
+            font-weight: 300; 
+        }
+    }
+    .logo {
+        display: block;
+        float: left;
+        font-size: 1.8rem;
+        padding: 10px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 900;  
+        &:hover {
+            color: $magenta; 
+        }
+    } 
+  }
+  
+  
+  /* menu */
+    .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+    .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    &:hover {
+        color: $magenta; 
+    }
+  }
+  
+  .header .menu-icon .navicon {
+    background: $white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+    &:hover {
+        background-color: $magenta; 
+    }
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: $white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: background-color .2s ease-out;
+    width: 100%;
+    &:hover {
+        background-color: $magenta; 
+    }
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+    .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 800px;
+  }
+
+//   .menu-btn:checked > li:first-child a {
+//       padding-top: 100px; 
+//   }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+
+/* -------------------------------HEADER-------------------------------*/
+
+  #wrapper {
+	position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    z-index: 1;
+    width: 100% !important;
+    height: 100%;
+	margin:0;
+    padding:0;
+}
+
+#layer {
+	position: absolute;
+	z-index:2;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color: $layer;
+	background: -webkit-linear-gradient(top, $layer, $layer1); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(top, $layer, $layer1); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(top, $layer, $layer1); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, $layer, $layer1); /* Standard syntax (must be last) */
 }
