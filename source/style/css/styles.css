@@ -119,7 +119,7 @@ To prevent this, we will add the style that clears the flow. */
   margin-right: 2%; }
 
 body {
-  background-image: url(../photos/background520.jpg);
+  background-image: url(../photos/backgroundDark520.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -186,8 +186,6 @@ body {
   position: relative;
   transition: background-color .2s ease-out;
   width: 18px; }
-  .header .menu-icon .navicon:hover {
-    background-color: #f9225b; }
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
@@ -198,9 +196,6 @@ body {
   position: absolute;
   transition: background-color .2s ease-out;
   width: 100%; }
-  .header .menu-icon .navicon:before:hover,
-  .header .menu-icon .navicon:after:hover {
-    background-color: #f9225b; }
 
 .header .menu-icon .navicon:before {
   top: 5px; }
@@ -229,33 +224,37 @@ body {
   top: 0; }
 
 /* -------------------------------HEADER-------------------------------*/
-#wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0;
-  z-index: 1;
-  width: 100% !important;
-  height: 100%;
-  margin: 0;
-  padding: 0; }
-
-#layer {
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  top: 0;
+header {
+  padding-top: 60%;
+  position: relative;
+  min-height: 750px;
   width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(99, 99, 99, 0.8));
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(99, 99, 99, 0.8));
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(99, 99, 99, 0.8));
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(99, 99, 99, 0.8));
-  /* Standard syntax (must be last) */ }
+  top: 0;
+  z-index: 1; }
+  header div {
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center; }
+    header div h3 {
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: 600;
+      position: fixed;
+      top: 50%;
+      margin: 0 auto; }
+    header div h1 {
+      text-align: center;
+      color: #f9225b;
+      position: fixed;
+      top: 60%; }
+    header div p {
+      text-align: center;
+      text-transform: uppercase;
+      color: #7a89ab;
+      position: fixed;
+      top: 70%; }
 
 @media only screen and (min-width: 560px) {
   .col-m-1 {
@@ -281,7 +280,9 @@ body {
   .col-m-11 {
     width: 91.66%; }
   .col-m-12 {
-    width: 100%; } }
+    width: 100%; }
+  body {
+    background-image: url(../photos/backgroundDark890.jpg); } }
 
 @media only screen and (min-width: 1140px) {
   .col-1 {
@@ -308,6 +309,8 @@ body {
     width: 91.66%; }
   .col-12 {
     width: 100%; }
+  body {
+    background-image: url(../photos/backgroundDark.jpg); }
   /*-------------------NAVBAR-------------------*/
   .header li {
     float: left; }
