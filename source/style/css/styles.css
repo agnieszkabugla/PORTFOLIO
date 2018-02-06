@@ -115,15 +115,7 @@ To prevent this, we will add the style that clears the flow. */
   font-family: 'Source Sans Pro', sans-serif; }
 
 #gutter {
-  margin-left: 2%;
-  margin-right: 2%; }
-
-body {
-  background-image: url(../photos/backgroundDark520.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; }
+  margin: 0 2%; }
 
 /* -------------------------------NAVBAR-------------------------------*/
 /* header */
@@ -224,37 +216,47 @@ body {
   top: 0; }
 
 /* -------------------------------HEADER-------------------------------*/
-header {
-  padding-top: 60%;
-  position: relative;
-  min-height: 750px;
+.background {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../photos/backgroundDark520.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.layer {
+  position: absolute;
+  height: 100%;
   width: 100%;
   top: 0;
+  left: 0;
   z-index: 1; }
-  header div {
+  .layer div {
+    position: fixed;
     width: 100%;
-    display: block;
-    margin: auto;
-    text-align: center; }
-    header div h3 {
-      text-align: center;
-      text-transform: uppercase;
-      color: #ffffff;
-      font-weight: 600;
-      position: fixed;
-      top: 50%;
-      margin: 0 auto; }
-    header div h1 {
-      text-align: center;
-      color: #f9225b;
-      position: fixed;
-      top: 60%; }
-    header div p {
-      text-align: center;
-      text-transform: uppercase;
-      color: #7a89ab;
-      position: fixed;
-      top: 70%; }
+    top: 0; }
+  .layer .title {
+    text-align: center;
+    letter-spacing: 2px; }
+  .layer #title1 {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 70%; }
+  .layer #title2 {
+    color: #f9225b;
+    font-size: 3rem;
+    font-weight: 700; }
+  .layer #title3 {
+    text-transform: uppercase;
+    color: #7a89ab;
+    font-weight: 200;
+    margin: 0 60px; }
 
 @media only screen and (min-width: 560px) {
   .col-m-1 {
@@ -281,8 +283,16 @@ header {
     width: 91.66%; }
   .col-m-12 {
     width: 100%; }
-  body {
-    background-image: url(../photos/backgroundDark890.jpg); } }
+  /*-------------------HEADER-------------------*/
+  .background {
+    background-image: url(../photos/backgroundDark890.jpg); }
+  .layer #title1 {
+    margin-top: 40%;
+    font-size: 3rem; }
+  .layer #title2 {
+    font-size: 6rem; }
+  .layer #title3 {
+    font-size: 2rem; } }
 
 @media only screen and (min-width: 1140px) {
   .col-1 {
@@ -309,8 +319,6 @@ header {
     width: 91.66%; }
   .col-12 {
     width: 100%; }
-  body {
-    background-image: url(../photos/backgroundDark.jpg); }
   /*-------------------NAVBAR-------------------*/
   .header li {
     float: left; }
@@ -321,4 +329,14 @@ header {
     float: right;
     max-height: none; }
   .header .menu-icon {
-    display: none; } }
+    display: none; }
+  /*-------------------HEADER-------------------*/
+  .background {
+    background-image: url(../photos/backgroundDark.jpg); }
+  .layer #title1 {
+    margin-top: 20%;
+    font-size: 3rem; }
+  .layer #title2 {
+    font-size: 6rem; }
+  .layer #title3 {
+    font-size: 2rem; } }

@@ -31,17 +31,9 @@ To prevent this, we will add the style that clears the flow. */
 }
 
 #gutter {
-    margin-left: 2%;
-    margin-right: 2%; 
+    margin: 0 2%; 
 }
 
-body {
-    background-image: url(../photos/backgroundDark520.jpg); 
-    background-position: center center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-    background-size: cover; 
-}
 
 /* -------------------------------NAVBAR-------------------------------*/
 
@@ -170,42 +162,55 @@ body {
 
 
 /* -------------------------------HEADER-------------------------------*/
-header {
-    padding-top: 60%; 
-    position: relative;
-    min-height: 750px; ;
+
+.background {    
+    z-index: 0; 
+    position: absolute;
+    top: 0;
+    left: 0; 
+    height: 100%;
+    width: 100%;
+    background-image: url(../photos/backgroundDark520.jpg); 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover; 
+
+}
+
+.layer { 
+    position: absolute; 
+    height: 100%;
     width: 100%; 
-    top: 0;        
+    top: 0;   
+    left: 0;      
     z-index: 1; 
     div {
-        width: 100%; 
-        display: block;
-        margin: auto; 
-        text-align: center;
-        h3 {
-            text-align: center;
-            text-transform: uppercase;
-            color: $white;
-            font-weight: 600; 
-            position: fixed;
-            top: 50%;
-            margin: 0 auto; 
-    
-            
-        }
-        h1 {
-            text-align: center; 
-            color: $magenta; 
-            position: fixed; 
-            top: 60%; 
-        }
-        p {
-            text-align: center;
-            text-transform: uppercase; 
-            color: $blue; 
-            position: fixed; 
-            top: 70%; 
-        }
+        position: fixed; 
+        width: 100%;
+        top: 0; 
     }
+    .title {        
+        text-align: center; 
+        letter-spacing: 2px; 
+    }
+    #title1 {
+        text-transform: uppercase;
+        color: $white;
+        font-weight: 600; 
+        margin-top: 70%; 
+    }
+    #title2 {
+        color: $magenta; 
+        font-size: 3rem; 
+        font-weight: 700;
+    }
+    #title3 {
+        text-transform: uppercase; 
+        color: $blue;
+        font-weight: 200; 
+        margin: 0 60px;  
+    }
+  
 
 }

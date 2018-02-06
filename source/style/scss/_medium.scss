@@ -12,8 +12,22 @@
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
 
-    body {
+    /*-------------------HEADER-------------------*/
+    .background {
         background-image: url(../photos/backgroundDark890.jpg);
-      }
+    }
+    
+    .layer {
+        #title1 {
+            margin-top: 40%;
+            font-size: 3rem; 
+        }
+        #title2{
+            font-size: 6rem;
+        }
+        #title3{
+            font-size: 2rem; 
+        }
+    }
 
 }
