@@ -98,7 +98,7 @@ html {
 /* the columns inside a row are all floating to the left, and are therefore taken out of the flow of
 the page, and other elements will be placed as if the columns do not exist.
 To prevent this, we will add the style that clears the flow. */
-.row::after {
+.clearfix::after {
   content: "";
   clear: both;
   display: table; }
@@ -109,6 +109,11 @@ To prevent this, we will add the style that clears the flow. */
 [class*="col-"] {
   float: left;
   padding: 15px; }
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto; }
 
 * {
   font-size: 16px;
@@ -216,12 +221,19 @@ To prevent this, we will add the style that clears the flow. */
   top: 0; }
 
 /* -------------------------------HEADER-------------------------------*/
+.content {
+  top: 50px;
+  bottom: 50px;
+  min-height: 100%;
+  width: 100%;
+  position: fixed; }
+
 .background {
   z-index: 0;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 740px;
   width: 100%;
   background-image: url(../photos/backgroundDark520.jpg);
   background-position: center center;
@@ -230,16 +242,10 @@ To prevent this, we will add the style that clears the flow. */
   background-size: cover; }
 
 .layer {
-  position: absolute;
-  height: 100%;
+  position: fixed;
+  z-index: 1;
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1; }
-  .layer div {
-    position: fixed;
-    width: 100%;
-    top: 0; }
+  top: 0; }
   .layer .title {
     text-align: center;
     letter-spacing: 2px; }
@@ -256,7 +262,17 @@ To prevent this, we will add the style that clears the flow. */
     text-transform: uppercase;
     color: #7a89ab;
     font-weight: 200;
-    margin: 0 60px; }
+    margin: 0 60px;
+    padding-top: 15px; }
+
+/* -------------------------------HEADER-------------------------------*/
+.main {
+  position: relative;
+  min-height: 500px;
+  z-index: 0;
+  width: 100%; }
+  .main .aboutMe {
+    background-color: #1d2028; }
 
 @media only screen and (min-width: 560px) {
   .col-m-1 {
