@@ -27,7 +27,8 @@ const config = {
     new webpack.DefinePlugin(GLOBALS),
     //new ExtractTextPlugin('style.css'),
     new CopyWebpackPlugin([
-      {from: path.resolve(__dirname, 'source/style/css'), to:'style/css'}
+      {from: path.resolve(__dirname, 'source/style/css'), to:'style/css'},
+      {from: path.resolve(__dirname, 'source/style/photos'), to:'style/photos'}
     ]),
     //minify JS
     new webpack.optimize.UglifyJsPlugin()

@@ -173,7 +173,7 @@ body {
     bottom: 50px; 
     min-height: 100%;
     width: 100%;
-    position: fixed; 
+    //position: fixed; 
 }
 
 .background {    
@@ -186,13 +186,13 @@ body {
     background-image: url(../photos/backgroundDark520.jpg); 
     background-position: center center; 
     background-repeat: no-repeat; 
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover; 
 
 }
 
 .layer {
-        position: fixed; 
+        position: absolute; 
         z-index: 1; 
         width: 100%;
         top: 0; 
@@ -203,19 +203,20 @@ body {
     }
     #title1 {
         text-transform: uppercase;
+        font-size: 1.5rem; 
         color: $white;
         font-weight: 600; 
         margin-top: 70%; 
     }
     #title2 {
         color: $magenta; 
-        font-size: 3rem; 
-        font-weight: 700;
+        font-size: 3.7rem; 
+        font-weight: 600;
     }
     #title3 {
         text-transform: uppercase; 
         color: $blue;
-        font-weight: 200; 
+        font-weight: 300; 
         margin: 0 60px;  
         padding-top: 15px; 
     }
@@ -229,6 +230,38 @@ body {
     z-index: 0;
     width: 100%; 
     .aboutMe {
-        background-color: $grey; 
+        background-color: $grey;
+        text-align: center; 
+        padding-top: 120px; 
+        h2 {
+            color: $white;
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: 1.6px;  
+        }
+        h4 {
+            color: $blue; 
+            font-weight: 300;
+            font-size: 1.3rem;  
+            letter-spacing: 1.5px; 
+            padding: 20px 0; 
+        }
+        hr {
+            max-width: 50%; 
+            margin: 1em auto; 
+            padding-bottom: 20px; 
+        }       
+        p:last-of-type {
+            padding-bottom: 100px; 
+        }
+        p {
+            color: $blue; 
+            margin: 4% 4%;  
+            font-weight: 300; 
+            letter-spacing: 1.5px; 
+            text-align: left; 
+            line-height: 140%; 
+
+        }
     }
 }

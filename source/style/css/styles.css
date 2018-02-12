@@ -225,8 +225,7 @@ body {
   top: 50px;
   bottom: 50px;
   min-height: 100%;
-  width: 100%;
-  position: fixed; }
+  width: 100%; }
 
 .background {
   z-index: 0;
@@ -238,11 +237,11 @@ body {
   background-image: url(../photos/backgroundDark520.jpg);
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover; }
 
 .layer {
-  position: fixed;
+  position: absolute;
   z-index: 1;
   width: 100%;
   top: 0; }
@@ -251,17 +250,18 @@ body {
     letter-spacing: 2px; }
   .layer #title1 {
     text-transform: uppercase;
+    font-size: 1.5rem;
     color: #ffffff;
     font-weight: 600;
     margin-top: 70%; }
   .layer #title2 {
     color: #f9225b;
-    font-size: 3rem;
-    font-weight: 700; }
+    font-size: 3.7rem;
+    font-weight: 600; }
   .layer #title3 {
     text-transform: uppercase;
     color: #7a89ab;
-    font-weight: 200;
+    font-weight: 300;
     margin: 0 60px;
     padding-top: 15px; }
 
@@ -272,7 +272,33 @@ body {
   z-index: 0;
   width: 100%; }
   .main .aboutMe {
-    background-color: #1d2028; }
+    background-color: #1d2028;
+    text-align: center;
+    padding-top: 120px; }
+    .main .aboutMe h2 {
+      color: #ffffff;
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 1.6px; }
+    .main .aboutMe h4 {
+      color: #7a89ab;
+      font-weight: 300;
+      font-size: 1.3rem;
+      letter-spacing: 1.5px;
+      padding: 20px 0; }
+    .main .aboutMe hr {
+      max-width: 50%;
+      margin: 1em auto;
+      padding-bottom: 20px; }
+    .main .aboutMe p:last-of-type {
+      padding-bottom: 100px; }
+    .main .aboutMe p {
+      color: #7a89ab;
+      margin: 4% 4%;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      text-align: left;
+      line-height: 140%; }
 
 @media only screen and (min-width: 560px) {
   .col-m-1 {
