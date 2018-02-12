@@ -10,24 +10,26 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 the page, and other elements will be placed as if the columns do not exist.
 To prevent this, we will add the style that clears the flow. */
 .clearfix::after {
-    content:"";
+    content: "";
     clear: both; 
     display: table; 
 }
 
-[class*="col-"] {
+.col-sm-1 {
     width: 100%;
 }
 
 [class*="col-"] {
     float: left; 
     padding: 15px; 
+    border: 1px solid red; 
 }
 
 body {
     height: 100%;
     width: 100%;
     background-color: transparent; 
+    overflow-x: hidden; 
 }
 
 
@@ -231,38 +233,6 @@ body {
     width: 100%; 
     .aboutMe {
         background-color: $grey;
-        text-align: center; 
-        padding-top: 120px; 
-        h2 {
-            color: $white;
-            font-size: 2.2rem;
-            font-weight: 600;
-            letter-spacing: 1.6px;  
-        }
-        h4 {
-            color: $blue; 
-            font-weight: 300;
-            font-size: 1.3rem;  
-            letter-spacing: 1.5px; 
-            padding: 20px 0; 
-        }
-        hr {
-            max-width: 50%; 
-            margin: 1em auto; 
-            padding-bottom: 20px; 
-        }       
-        p:last-of-type {
-            padding-bottom: 10px; 
-        }
-        p {
-            color: $blue; 
-            margin: 4% 4%;  
-            font-weight: 300; 
-            letter-spacing: 1.5px; 
-            text-align: left; 
-            line-height: 140%; 
-
-        }
         // slanted div
         .container {
             box-sizing: border-box;
@@ -280,37 +250,69 @@ body {
     }
     .whyWork {
         background-color: $black;
+        // slanted div
+        .container {
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .triangle {
+            background-color: transparent;
+            width: 0;
+            height: 0;
+            border-left: 0px solid;
+            border-top: 100px solid $black;
+            border-right: 100vw solid $green;
+            border-bottom: 0px solid;
+        }
+        svg {
+            color: $blue;
+            font-size: 4em; 
+        }
+        .desc {
+            text-align: center;
+            text-transform: uppercase;
+            color: $white; 
+        }
+    }
+    .whyWork, .aboutMe, .recent {
         text-align: center; 
-        padding-top: 120px;
-        margin-top: -1px;  
+        padding-top: 50px;
+        margin-top: -1px; 
         h2 {
             color: $white;
             font-size: 2.2rem;
             font-weight: 600;
-            letter-spacing: 1.6px;  
+            letter-spacing: 1.6px;
+            margin: 4% 5%;       
         }
         h4 {
             color: $blue; 
             font-weight: 300;
             font-size: 1.3rem;  
             letter-spacing: 1.5px; 
-            padding: 20px 0; 
+            padding: 20px 0;
+            margin: 4% 5%;                
         }
         hr {
             max-width: 50%; 
             margin: 1em auto; 
             padding-bottom: 20px; 
+            border-top: 1px solid $white; 
         }       
         p:last-of-type {
             padding-bottom: 10px; 
         }
         p {
             color: $blue; 
-            margin: 4% 4%;  
             font-weight: 300; 
             letter-spacing: 1.5px; 
             text-align: left; 
             line-height: 140%; 
+            margin: 4% 5%;               
         }
     }
+    .recent {
+        background-color: $green; 
+    }
+
 }

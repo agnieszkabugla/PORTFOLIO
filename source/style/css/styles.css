@@ -103,17 +103,19 @@ To prevent this, we will add the style that clears the flow. */
   clear: both;
   display: table; }
 
-[class*="col-"] {
+.col-sm-1 {
   width: 100%; }
 
 [class*="col-"] {
   float: left;
-  padding: 15px; }
+  padding: 15px;
+  border: 1px solid red; }
 
 body {
   height: 100%;
   width: 100%;
-  background-color: transparent; }
+  background-color: transparent;
+  overflow-x: hidden; }
 
 * {
   font-size: 16px;
@@ -272,33 +274,7 @@ body {
   z-index: 0;
   width: 100%; }
   .main .aboutMe {
-    background-color: #1d2028;
-    text-align: center;
-    padding-top: 120px; }
-    .main .aboutMe h2 {
-      color: #ffffff;
-      font-size: 2.2rem;
-      font-weight: 600;
-      letter-spacing: 1.6px; }
-    .main .aboutMe h4 {
-      color: #7a89ab;
-      font-weight: 300;
-      font-size: 1.3rem;
-      letter-spacing: 1.5px;
-      padding: 20px 0; }
-    .main .aboutMe hr {
-      max-width: 50%;
-      margin: 1em auto;
-      padding-bottom: 20px; }
-    .main .aboutMe p:last-of-type {
-      padding-bottom: 10px; }
-    .main .aboutMe p {
-      color: #7a89ab;
-      margin: 4% 4%;
-      font-weight: 300;
-      letter-spacing: 1.5px;
-      text-align: left;
-      line-height: 140%; }
+    background-color: #1d2028; }
     .main .aboutMe .container {
       box-sizing: border-box;
       overflow: hidden; }
@@ -311,34 +287,58 @@ body {
       border-left: 100vw solid #191c23;
       border-bottom: 0px solid; }
   .main .whyWork {
-    background-color: #191c23;
+    background-color: #191c23; }
+    .main .whyWork .container {
+      box-sizing: border-box;
+      overflow: hidden; }
+    .main .whyWork .triangle {
+      background-color: transparent;
+      width: 0;
+      height: 0;
+      border-left: 0px solid;
+      border-top: 100px solid #191c23;
+      border-right: 100vw solid #96c577;
+      border-bottom: 0px solid; }
+    .main .whyWork svg {
+      color: #7a89ab;
+      font-size: 4em; }
+    .main .whyWork .desc {
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff; }
+  .main .whyWork, .main .aboutMe, .main .recent {
     text-align: center;
-    padding-top: 120px;
+    padding-top: 50px;
     margin-top: -1px; }
-    .main .whyWork h2 {
+    .main .whyWork h2, .main .aboutMe h2, .main .recent h2 {
       color: #ffffff;
       font-size: 2.2rem;
       font-weight: 600;
-      letter-spacing: 1.6px; }
-    .main .whyWork h4 {
+      letter-spacing: 1.6px;
+      margin: 4% 5%; }
+    .main .whyWork h4, .main .aboutMe h4, .main .recent h4 {
       color: #7a89ab;
       font-weight: 300;
       font-size: 1.3rem;
       letter-spacing: 1.5px;
-      padding: 20px 0; }
-    .main .whyWork hr {
+      padding: 20px 0;
+      margin: 4% 5%; }
+    .main .whyWork hr, .main .aboutMe hr, .main .recent hr {
       max-width: 50%;
       margin: 1em auto;
-      padding-bottom: 20px; }
-    .main .whyWork p:last-of-type {
+      padding-bottom: 20px;
+      border-top: 1px solid #ffffff; }
+    .main .whyWork p:last-of-type, .main .aboutMe p:last-of-type, .main .recent p:last-of-type {
       padding-bottom: 10px; }
-    .main .whyWork p {
+    .main .whyWork p, .main .aboutMe p, .main .recent p {
       color: #7a89ab;
-      margin: 4% 4%;
       font-weight: 300;
       letter-spacing: 1.5px;
       text-align: left;
-      line-height: 140%; }
+      line-height: 140%;
+      margin: 4% 5%; }
+  .main .recent {
+    background-color: #96c577; }
 
 @media only screen and (min-width: 560px) {
   .col-m-1 {
