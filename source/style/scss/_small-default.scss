@@ -1,10 +1,15 @@
 @import "colors"; 
 
 // Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html {
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%; }
 
 // apply a natural box layout model to all elements
-* {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; }
 
 /* the columns inside a row are all floating to the left, and are therefore taken out of the flow of
 the page, and other elements will be placed as if the columns do not exist.
@@ -15,14 +20,15 @@ To prevent this, we will add the style that clears the flow. */
     display: table; 
 }
 
-.col-sm-1 {
-    width: 100%;
-}
-
+// apply these rules to all classes that begin with 'col-'
 [class*="col-"] {
     float: left; 
     padding: 15px; 
-    border: 1px solid red; 
+}
+
+//grid system for mobiles phones
+.col-sm-1 {
+    width: 100%;
 }
 
 body {
@@ -31,7 +37,6 @@ body {
     background-color: transparent; 
     overflow-x: hidden; 
 }
-
 
 * {
     font-size: 16px; 
@@ -267,12 +272,30 @@ body {
         svg {
             color: $blue;
             font-size: 4em; 
+            position: absolute;
+            top: 25%; 
+            left: 25%; 
+            width: 50%; 
+            height: 50%; 
         }
         .desc {
             text-align: center;
             text-transform: uppercase;
             color: $white; 
         }
+        .round {
+            border: 7px solid $magenta; 
+            border-radius: 50%; 
+            position: relative; 
+            width: 40%; 
+            margin: auto; 
+        }
+        .round:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+        
     }
     .whyWork, .aboutMe, .recent {
         text-align: center; 
@@ -313,6 +336,29 @@ body {
     }
     .recent {
         background-color: $green; 
+        #whiteFont {
+            color: $white; 
+        }
+        #lastHr {
+            padding-bottom: 100px; 
+        }
+        .container {
+            max-width: 100%; 
+            position: relative;
+            img {
+                max-width: 100%;
+                position: relative; 
+            }
+            div {
+                max-width: 100%; 
+                position: absolute;
+                top: auto;
+                left: auto; 
+            }
+            h4 {
+                color: $white; 
+            }
+        }
     }
 
 }

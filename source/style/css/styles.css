@@ -103,13 +103,12 @@ To prevent this, we will add the style that clears the flow. */
   clear: both;
   display: table; }
 
-.col-sm-1 {
-  width: 100%; }
-
 [class*="col-"] {
   float: left;
-  padding: 15px;
-  border: 1px solid red; }
+  padding: 15px; }
+
+.col-sm-1 {
+  width: 100%; }
 
 body {
   height: 100%;
@@ -301,11 +300,26 @@ body {
       border-bottom: 0px solid; }
     .main .whyWork svg {
       color: #7a89ab;
-      font-size: 4em; }
+      font-size: 4em;
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      width: 50%;
+      height: 50%; }
     .main .whyWork .desc {
       text-align: center;
       text-transform: uppercase;
       color: #ffffff; }
+    .main .whyWork .round {
+      border: 7px solid #f9225b;
+      border-radius: 50%;
+      position: relative;
+      width: 40%;
+      margin: auto; }
+    .main .whyWork .round:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%; }
   .main .whyWork, .main .aboutMe, .main .recent {
     text-align: center;
     padding-top: 50px;
@@ -339,6 +353,23 @@ body {
       margin: 4% 5%; }
   .main .recent {
     background-color: #96c577; }
+    .main .recent #whiteFont {
+      color: #ffffff; }
+    .main .recent #lastHr {
+      padding-bottom: 100px; }
+    .main .recent .container {
+      max-width: 100%;
+      position: relative; }
+      .main .recent .container img {
+        max-width: 100%;
+        position: relative; }
+      .main .recent .container div {
+        max-width: 100%;
+        position: absolute;
+        top: auto;
+        left: auto; }
+      .main .recent .container h4 {
+        color: #ffffff; }
 
 @media only screen and (min-width: 560px) {
   .col-m-1 {
