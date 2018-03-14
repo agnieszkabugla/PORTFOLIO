@@ -342,22 +342,13 @@ body {
         #lastHr {
             padding-bottom: 100px; 
         }
-        .container {
+        img .slick-slide {
             width: 100%; 
-            position: relative;
-            img {
-                width: 100%;
-                position: absolute;
-                top: 0; 
-                left: 0;
-                z-index: 2; 
-            }
         }
-        .container:after {
-            content: "";
-            display: block; 
-            padding-bottom: 100%; 
-        }
+        img {
+            width: 100%;
+            height: 100%;
+        }   
     }
 
 }
