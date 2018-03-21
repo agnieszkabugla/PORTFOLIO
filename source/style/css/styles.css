@@ -352,24 +352,40 @@ body {
       line-height: 140%;
       margin: 4% 5%; }
   .main .recent {
-    background-color: #96c577; }
+    background-color: #96c577;
+    padding-bottom: 10px; }
     .main .recent #whiteFont {
       color: #ffffff; }
     .main .recent #lastHr {
-      padding-bottom: 100px; }
-    .main .recent .container {
+      padding-bottom: 70px; }
+    .main .recent img .slick-slide {
+      width: 100%; }
+    .main .recent img {
       width: 100%;
-      position: relative; }
-      .main .recent .container img {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2; }
-    .main .recent .container:after {
-      content: "";
-      display: block;
-      padding-bottom: 100%; }
+      height: 100%; }
+  .main .quote {
+    background-color: #1d2028;
+    padding-top: 5%;
+    padding-bottom: 5%; }
+    .main .quote .fa-quote-right {
+      width: 100%;
+      align-self: center;
+      font-size: 100px;
+      color: #f9225b;
+      padding-bottom: 5%; }
+    .main .quote .sentence {
+      width: 100%;
+      font-size: 35px;
+      text-align: center;
+      color: #7a89ab;
+      padding-top: 5%;
+      padding-bottom: 8px; }
+    .main .quote .author {
+      width: 100%;
+      text-align: center;
+      font-size: 25px;
+      text-transform: uppercase;
+      color: #7a89ab; }
 
 @media only screen and (min-width: 560px) {
   .col-m-1 {
