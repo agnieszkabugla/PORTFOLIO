@@ -435,10 +435,12 @@ body {
           opacity: 1; }
         .main .contact .form .text :-ms-input-placeholder, .main .contact .form .email :-ms-input-placeholder {
           /* IE 10+ */
-          color: #191c23; }
+          color: #191c23;
+          opacity: 1; }
         .main .contact .form .text :-moz-placeholder, .main .contact .form .email :-moz-placeholder {
           /* Firefox 18- */
-          color: #191c23; }
+          color: #191c23;
+          opacity: 1; }
 
 @media only screen and (min-width: 560px) {
   .col-m-1 {

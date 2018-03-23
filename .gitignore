@@ -5,7 +5,7 @@ npm-debug.log
 .DS_Store
 
 # SASS files
-/sass-cache
+/.sass-cache
 *.css.map
 
 # Environment variables with sensitive data
