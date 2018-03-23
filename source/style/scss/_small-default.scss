@@ -103,7 +103,7 @@ body {
   /* menu icon */
     .header .menu-icon {
     cursor: pointer;
-    display: inline-block;
+    //display: inline-block;
     float: right;
     padding: 28px 20px;
     position: relative;
@@ -225,9 +225,9 @@ body {
         margin: 0 60px;  
         padding-top: 15px; 
     }
-}
+} // end of layer
 
-/* -------------------------------HEADER-------------------------------*/
+/* -------------------------------MAIN-------------------------------*/
 
 .main {
     position: relative;
@@ -250,7 +250,7 @@ body {
             border-left: 100vw solid $black;
             border-bottom: 0px solid;
         }
-    }
+    } // end of about me
     .whyWork {
         background-color: $black;
         // slanted div
@@ -294,7 +294,7 @@ body {
             padding-bottom: 100%;
         }
         
-    }
+    } // end of why work with me
     .whyWork, .aboutMe, .recent {
         text-align: center; 
         padding-top: 50px;
@@ -331,7 +331,7 @@ body {
             line-height: 140%; 
             margin: 4% 5%;               
         }
-    }
+    } // end of general .whyWork, .aboutMe, .recent
     .recent {
         background-color: $green;
         padding-bottom: 10px;  
@@ -348,7 +348,7 @@ body {
             width: 100%;
             height: 100%;
         }   
-    }
+    } //end of recent
 
     .quote {
         background-color: $grey; 
@@ -363,18 +363,71 @@ body {
         }
         .sentence {
             width: 100%; 
-            font-size: 35px;
+            font-size: 25px;
             text-align: center;
             color: $blue; 
             padding-top: 5%;  
             padding-bottom: 8px; 
+            font-style: italic; 
+            line-height: 120%;
+            font-weight: 300; 
         }
         .author {
             width: 100%; 
             text-align: center;
-            font-size: 25px;
+            font-size: 20px;
             text-transform: uppercase; 
             color: $blue;  
+            font-weight: 600; 
         }
-    }
-}
+    } // end of quote
+    .contact {
+        background-color: $light; 
+        padding-top: 5%; 
+        padding-bottom: 5%;
+        .beforeForm {
+            width: 100%; 
+            text-align: center; 
+            color: $grey;
+            h1 {
+                font-size: 45px;
+                font-weight: 400;  
+            }
+            :nth-child(2) {
+                text-transform: uppercase; 
+                font-size: 13px; 
+                padding-top: 15px;
+                letter-spacing: 2px;  
+            }
+            hr {
+                max-width: 50%; 
+                margin: 1em auto; 
+                padding-bottom: 20px; 
+                border-top: 1px solid $grey; 
+            }
+            :nth-child(4) {
+                font-size: 13px;
+                line-height: 150%;
+                margin: 0 10%; 
+                padding-bottom: 20px;   
+            }
+        }
+        .form {
+            width: 100%;
+            .text, .email {
+                width: 80%;
+                margin: 5% auto; 
+                input {
+                    border-width: 0px;
+                    width: 100%; 
+                    line-height: 200%; 
+                    color: $black; 
+                }
+                ::-webkit-input-placeholder { /* Chrome/Opera/Safari */ color: $black; opacity: 1;}
+                ::-moz-placeholder { /* Firefox 19+ */ color: pink; opacity: 1; }
+                :-ms-input-placeholder { /* IE 10+ */ color: pink; }
+                :-moz-placeholder { /* Firefox 18- */ color: pink; }
+            }
+        }
+    } //end of contact
+} // enf of MAIN
