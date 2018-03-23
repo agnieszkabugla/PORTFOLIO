@@ -4,6 +4,10 @@ bundle.js
 npm-debug.log
 .DS_Store
 
+# SASS files
+/sass-cache
+*.css.map
+
 # Environment variables with sensitive data
 .env
 env.sh
