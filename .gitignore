@@ -3,6 +3,7 @@
 bundle.js
 npm-debug.log
 .DS_Store
+/.vscode
 
 # SASS files
 /.sass-cache
@@ -14,7 +15,7 @@ env.sh
 
 
 #dist folder
-dist
+/dist
 
 #Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
