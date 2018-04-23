@@ -1,4 +1,5 @@
-import jQuery from 'jquery'; 
+/* eslint-disable no-undef */
+import jQuery from 'jquery';
 
 $(document).ready(function(){
     $('.myslider').slick({
@@ -27,4 +28,4 @@ $(document).ready(function(){
           }
         ]
     });
-}); 
+});
