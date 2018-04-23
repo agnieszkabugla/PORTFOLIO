@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
 //import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import HTMLWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';  
 
 const GLOBALS = {
@@ -31,7 +32,42 @@ const config = {
       {from: path.resolve(__dirname, 'source/style/photos'), to:'style/photos'}
     ]),
     //minify JS
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      minimize: true,
+      compress: {
+        warnings: false,
+        screw_ie8: true,
+        conditionals: true,
+        unused: true,
+        comparisons: true,
+        sequences: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true
+      },
+      output: {
+        comments: false,
+      }
+    }),
+    // create HTML file that includes reference to bundled js
+    new HTMLWebpackPlugin({
+      template: 'index.html',
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
+      }
+    }),
   ],
   module: {
     rules: [
@@ -40,14 +76,6 @@ const config = {
         include: path.join(__dirname, './source/'), 
         exclude: path.join(__dirname, './node_modules/'), 
         use: {loader: 'babel-loader'} 
-      },
-      { 
-        test: /\.jpeg$/,
-        use:{loader: "url-loader"}  
-      }, 
-      { 
-        test: /\.png$/, 
-        use: {loader: "url-loader"} 
       }
     ]
   }
