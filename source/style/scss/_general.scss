@@ -39,3 +39,14 @@ body {
   font-size: 16px;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+// SLANTED DIVS
+.container {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.triangle {
+  background-color: transparent;
+  width: 0;
+  height: 0;
+}
