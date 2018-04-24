@@ -1,47 +1,58 @@
 @media only screen and (min-width: 1140px) {
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
 
 
-        /*-------------------NAVBAR-------------------*/
-        .header li {
-          float: left;
-        }
-        .header li a {
-          padding: 20px 30px;
-        }
-        .header .menu {
-          clear: none;
-          float: right;
-          max-height: none;
-        }
-        .header .menu-icon {
-          display: none;
-        }
-        /*-------------------HEADER-------------------*/
-    .background {
-      background-image: url(../photos/backgroundDark.jpg);
-    }
+  /*-------------------NAVBAR-------------------*/
+  .header .logo {
+    height: 84px;
+    font-size: 4rem;
+  }
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  /*-------------------HEADER-------------------*/
+  .background {
+    background-image: url(../photos/backgroundDark.jpg);
+  }
+  .content {
     .layer {
-      #title1 {
-        margin-top: 20%;
-        font-size: 3rem; 
+      padding-top: 25%;
+      h1 {
+        font-size: 5rem;
       }
-      #title2{
-        font-size: 6rem;
+      h2 {
+        font-size: 2rem;
       }
-      #title3{
-        font-size: 2rem; 
+    }
+    .contact .beforeForm {
+      padding: 0 15%;
+    }
+    .contact .form {
+      .text, .email, .msg, button {
+        width: 60%;
       }
+    }
   }
 }
