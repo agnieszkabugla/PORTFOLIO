@@ -1,8 +1,34 @@
 /* eslint-disable no-undef */
 import jQuery from 'jquery';
 
-$(document).ready(function(){
+var mobile;
+var tablet;
+var desktop;
 
+function detectFormat() {
+  if ($( window ).outerWidth(true) <= 559) {
+    mobile = true;
+    tablet = false;
+    desktop = false;
+  } else if($( window ).outerWidth(true) > 559 && $( window ).outerWidth(true) <= 1139) {
+    mobile = false;
+    tablet = true;
+    desktop = false;
+  } else {
+    mobile = false;
+    tablet = false;
+    desktop = true;
+  }
+}
+
+$( window ).resize(function() {
+  detectFormat();
+});
+
+
+$(document).ready(function(){
+  detectFormat();
+  // EMAIL SENDING
   $("button").click(function() {
     $("input").each(function() {
       if($(this).val() != '' && $("textarea").val() != '') {
@@ -42,9 +68,7 @@ $(document).ready(function(){
     });
   });
 
-
-
-
+  // SLIDER
   $('.myslider').slick({
     autoplay: true,
     dots: true,
@@ -71,4 +95,21 @@ $(document).ready(function(){
       }
     ]
   });
+
+  // ANIMATIONS
+  $("div.layer").fadeIn(3000, function() {
+    $(".background div").fadeIn(1000);
+  });
+
+  $(".background div").on("click", function(e) {
+    e.preventDefault();
+    var speed = 1500;
+    if (mobile === true || tablet === true) {
+      speed = 500;
+    }
+    $("html, body").animate({
+      scrollTop: $(".aboutMe").offset().top
+    }, speed);
+  })
+
 });

@@ -141,13 +141,22 @@
   position: relative;
   top: 0;
   left: 0;
-  height: 740px;
+  height: 100vh;
   width: 100%;
   background-image: url(../photos/backgroundDark520.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  > div {
+    display: none;
+    @extend .arrow;
+    border-top: 30px solid $blue;
+    &:hover {
+      border-top: 40px solid $blue;
+    }
+
+  }
 }
 
 .layer {
@@ -155,6 +164,7 @@
   top: 0;
   padding-top: 60%;
   width: 100%;
+  display: none; /*for fade-in animation*/
   .title {
     text-align: center;
     letter-spacing: 2px;

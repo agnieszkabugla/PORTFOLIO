@@ -107,6 +107,28 @@ hr {
   height: 0;
 }
 
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-top: 30px solid transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-top: 40px solid transparent;
+    bottom: -20px;
+  }
+}
+
 
 /* RESPONSIVE FONT SIZES*/
 @media all and (min-width: 1480px) {

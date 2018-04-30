@@ -209,6 +209,31 @@ hr {
   height: 0;
 }
 
+.arrow, .background > div {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-top: 30px solid transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.arrow:hover, .background > div:hover {
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-top: 40px solid transparent;
+  bottom: -20px;
+}
+
 /* RESPONSIVE FONT SIZES*/
 @media all and (min-width: 1480px) {
   body {
@@ -411,7 +436,7 @@ hr {
   position: relative;
   top: 0;
   left: 0;
-  height: 740px;
+  height: 100vh;
   width: 100%;
   background-image: url(../photos/backgroundDark520.jpg);
   background-position: center center;
@@ -420,11 +445,22 @@ hr {
   background-size: cover;
 }
 
+.background > div {
+  display: none;
+  border-top: 30px solid #7a89ab;
+}
+
+.background > div:hover {
+  border-top: 40px solid #7a89ab;
+}
+
 .layer {
   position: absolute;
   top: 0;
   padding-top: 60%;
   width: 100%;
+  display: none;
+  /*for fade-in animation*/
 }
 
 .layer .title {
@@ -698,7 +734,6 @@ hr {
   /*-------------------HEADER-------------------*/
   .background {
     background-image: url(../photos/backgroundDark890.jpg);
-    height: 100vh;
   }
   .layer {
     padding-top: 40%;
