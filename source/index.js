@@ -97,10 +97,12 @@ $(document).ready(function(){
   });
 
   // ANIMATIONS
+  // show header and then arrow
   $("div.layer").fadeIn(3000, function() {
     $(".background div").fadeIn(1000);
   });
 
+  // on arrow click, scroll to aboutMe
   $(".background div").on("click", function(e) {
     e.preventDefault();
     var speed = 1500;
@@ -110,6 +112,54 @@ $(document).ready(function(){
     $("html, body").animate({
       scrollTop: $(".aboutMe").offset().top
     }, speed);
-  })
+  });
 
+  //MENU NAVIGATION
+  // on home click, scroll to top
+  $(".home").on("click", function(e) {
+    e.preventDefault();
+    var speed = 1500;
+    if (mobile === true || tablet === true) {
+      speed = 500;
+    }
+    $("html, body").animate({
+      scrollTop: $(".layer").offset().top + (-84)
+    }, speed);
+  });
+
+  // on about click, scroll to aboutMe
+  $(".about").on("click", function(e) {
+    e.preventDefault();
+    var speed = 1500;
+    if (mobile === true || tablet === true) {
+      speed = 500;
+    }
+    $("html, body").animate({
+      scrollTop: $(".aboutMe").offset().top + (-84)
+    }, speed);
+  });
+  // on work click, scroll to recentWork
+  $(".work").on("click", function(e) {
+    e.preventDefault();
+    var speed = 1500;
+    if (mobile === true || tablet === true) {
+      speed = 500;
+    }
+    $("html, body").animate({
+      scrollTop: $(".recent").offset().top + (-84)
+    }, speed);
+  });
+
+  // on contact click, scroll to aboutMe
+  $(".cont").on("click", function(e) {
+    e.preventDefault();
+    var speed = 1500;
+    if (mobile === true || tablet === true) {
+      speed = 500;
+    }
+    $("html, body").animate({
+      scrollTop: $(".contact").offset().top + (-84)
+    }, speed);
+  });
+  // end of menu navigation
 });

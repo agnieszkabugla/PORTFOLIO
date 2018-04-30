@@ -401,7 +401,7 @@ hr {
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 800px;
+  max-height: 100vh;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
