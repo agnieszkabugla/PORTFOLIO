@@ -106,60 +106,81 @@ $(document).ready(function(){
   $(".background div").on("click", function(e) {
     e.preventDefault();
     var speed = 1500;
+    var offset = -84;
     if (mobile === true || tablet === true) {
       speed = 500;
+      offset = -64;
     }
     $("html, body").animate({
-      scrollTop: $(".aboutMe").offset().top
+      scrollTop: $(".aboutMe").offset().top + (offset )
     }, speed);
   });
 
   //MENU NAVIGATION
+  // navigation click, toggle between a cross and three bars
+  $(".header div.btn").on("click", function() {
+    //e.preventDefault();
+    $(this).toggleClass("cross");
+    $(".header ul").toggleClass("show-menu");
+  });
+
   // on home click, scroll to top
-  $(".home").on("click", function(e) {
+  $(".home" || ".logo").on("click", function(e) {
     e.preventDefault();
     var speed = 1500;
+    var offset = -84;
     if (mobile === true || tablet === true) {
       speed = 500;
+      offset = -64;
     }
     $("html, body").animate({
-      scrollTop: $(".layer").offset().top + (-84)
+      scrollTop: $(".layer").offset().top + (offset)
     }, speed);
+    $(".header ul").removeClass("show-menu");
+
   });
 
   // on about click, scroll to aboutMe
   $(".about").on("click", function(e) {
     e.preventDefault();
     var speed = 1500;
+    var offset = -84;
     if (mobile === true || tablet === true) {
       speed = 500;
+      offset = -64;
     }
     $("html, body").animate({
-      scrollTop: $(".aboutMe").offset().top + (-84)
+      scrollTop: $(".aboutMe").offset().top + (offset)
     }, speed);
+    $(".header ul").removeClass("show-menu");
   });
   // on work click, scroll to recentWork
   $(".work").on("click", function(e) {
     e.preventDefault();
     var speed = 1500;
+    var offset = -84;
     if (mobile === true || tablet === true) {
       speed = 500;
+      offset = -64;
     }
     $("html, body").animate({
-      scrollTop: $(".recent").offset().top + (-84)
+      scrollTop: $(".recent").offset().top + (offset)
     }, speed);
+    $(".header ul").removeClass("show-menu");
   });
-
   // on contact click, scroll to aboutMe
   $(".cont").on("click", function(e) {
     e.preventDefault();
     var speed = 1500;
+    var offset = -84;
     if (mobile === true || tablet === true) {
       speed = 500;
+      offset = -64;
     }
     $("html, body").animate({
-      scrollTop: $(".contact").offset().top + (-84)
+      scrollTop: $(".contact").offset().top + (offset)
     }, speed);
+    $(".header ul").removeClass("show-menu");
   });
   // end of menu navigation
 });

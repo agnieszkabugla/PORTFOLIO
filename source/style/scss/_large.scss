@@ -18,18 +18,24 @@
     height: 84px;
     font-size: 4rem;
   }
+  .header ul {
+    height: 100px;
+    padding: 0;
+    display: block;
+  }
   .header li {
     float: left;
   }
   .header li a {
     padding: 20px 30px;
+    height: 100px;
   }
   .header .menu {
     clear: none;
     float: right;
     max-height: none;
   }
-  .header .menu-icon {
+  .header .btn {
     display: none;
   }
   /*-------------------HEADER-------------------*/
@@ -38,7 +44,7 @@
   }
   .content {
     .layer {
-      padding-top: 25%;
+      padding-top: 15%;
       h1 {
         font-size: 5rem;
       }
