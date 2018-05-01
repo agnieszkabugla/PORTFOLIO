@@ -268,6 +268,12 @@ a {
   background-color: #ffffff;
 }
 
+.picture, .main .recent .portfolio > a div:first-child {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
 /* RESPONSIVE FONT SIZES*/
 @media all and (min-width: 1480px) {
   body {
@@ -527,17 +533,52 @@ a {
   padding-bottom: 70px;
 }
 
-.main .recent img .slick-slide {
-  width: 100%;
+.main .recent .portfolio {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
-.main .recent .myslider .slick-dots {
-  bottom: 15px;
+.main .recent .portfolio a {
+  position: relative;
 }
 
-.main .recent img {
+.main .recent .portfolio a:hover .description {
+  opacity: 1;
+}
+
+.main .recent .portfolio > a div:first-child {
+  height: 400px;
+}
+
+.main .recent .portfolio .real-homes {
+  background-image: url("../photos/RealHomesUK.png");
+}
+
+.main .recent .portfolio .react-movie-app {
+  background-image: url("../photos/blurred_lines.jpeg");
+}
+
+.main .recent .portfolio .kubernetes-portfolio {
+  background-image: url("../photos/Kubernetes.jpg");
+}
+
+.main .recent .portfolio .pokemon {
+  background-image: url("../photos/pokemon.jpg");
+}
+
+.main .recent .portfolio .description {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 100%;
+  background-color: rgba(29, 32, 40, 0.7);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main .recent .portfolio .description p, .main .recent .portfolio .description .link, .main .recent .portfolio .description footer a.tel, footer .main .recent .portfolio .description a.tel, .main .recent .portfolio .description footer a.email, footer .main .recent .portfolio .description a.email {
+  color: #ffffff;
+  font-weight: 800;
 }
 
 .main .recent .triangle {
@@ -660,6 +701,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 1.2em;
+  cursor: pointer;
 }
 
 .main .contact div button:hover {
@@ -729,7 +771,7 @@ footer p, footer .link, footer a.tel, footer a.email {
   text-align: center;
 }
 
-footer p:before, footer .link:before, footer a.tel:before, footer a.email:before {
+footer p:last-child:before, footer .link:last-child:before, footer a.tel:last-child:before, footer a.email:last-child:before {
   content: "\00A9";
 }
 

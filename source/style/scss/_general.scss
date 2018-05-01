@@ -161,6 +161,11 @@ a {
   position: relative;
   background-color: $white
 }
+.picture {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
 /* RESPONSIVE FONT SIZES*/
 @media all and (min-width: 1480px) {

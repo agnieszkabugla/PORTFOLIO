@@ -39,9 +39,9 @@
     <div class="background">
       <div></div>
     </div>
-    <div class="layer" id="gutter">
-        <h1 class="title">Agnieszka Bugla</h1>
-        <h3 class="title">Frontend Developer</h3>
+    <div itemScope itemType="http://schema.org/ProfilePage" class="layer" id="gutter">
+        <h1 itemProp="author" class="title">Agnieszka Bugla</h1>
+        <h3 itemProp="name"class="title">Frontend Developer</h3>
         <p class="title">Why go through life if you're not going to challenge yourself?</p>
     </div>
 
@@ -98,33 +98,41 @@
             <h2>Recent work</h2>
             <h4 id="whiteFont">Aspiring Frontend Developer</h4>
             <hr id="lastHr" />
-            <div class="myslider">
-                <img src="style/photos/blurred_lines.jpeg"
-                    sizes="(max-width: 40em) 100vw, 50vw"
-                    srcset="style/photos/blurred_lines560.jpeg 1x, style/photos/blurred_lines720.jpeg 2x">
-                <img src="style/photos/Kubernetes.jpg"
-                    sizes="(max-width: 40em) 100vw, 50vw"
-                    srcset="style/photos/Kubernetes560.jpg 1x, style/photos/Kubernetes720.jpg 2x">
-                <img src="style/photos/papers.jpg"
-                    sizes="(max-width: 40em) 100vw, 50vw"
-                    srcset="style/photos/papers560.jpg 1x, style/photos/papers720.jpg 2x">
-                <img src="style/photos/pokemon.jpg"
-                    sizes="(max-width: 40em) 100vw, 50vw"
-                    srcset="style/photos/pokemon560.jpg 1x, style/photos/pokemon720.jpg 2x">
-                <img src="style/photos/papers.jpg"
-                    sizes="(max-width: 40em) 100vw, 50vw"
-                    srcset="style/photos/papers560.jpg 1x, style/photos/papers720.jpg 2x">
-                <img src="style/photos/blurred_lines.jpeg"
-                    sizes="(max-width: 40em) 100vw, 50vw"
-                    srcset="style/photos/blurred_lines560.jpeg 1x, style/photos/blurred_lines720.jpeg 2x">
-                <img src="style/photos/Kubernetes.jpg"
-                    sizes="(max-width: 40em) 100vw, 50vw"
-                    srcset="style/photos/Kubernetes560.jpg 1x, style/photos/Kubernetes720.jpg 2x">
-                <img src="style/photos/pokemon.jpg"
-                    sizes="(max-width: 40em) 100vw, 50vw"
-                    srcset="style/photos/pokemon560.jpg 1x, style/photos/pokemon720.jpg 2x">
+            <div class="portfolio">
+
+              <a href="http://www.realhomesuk.co.uk/" target="_blank">
+                <div class="real-homes"></div>
+                <div class="description">
+                  <p>Real Homes UK</p>
+                  <p>React.js | Sass | Webpack3 | Babel | LazyLoading</p>
+                </div>
+              </a>
+
+              <a href="http://assorted-yarn.surge.sh/" target="_blank">
+                <div class="react-movie-app"></div>
+                <div class="description">
+                    <p>Movie Search App</p>
+                    <p>React.js | Redux | API | Bootstrap | CSS </p>
+                </div>
+              </a>
+
+              <a href="https://github.com/agnieszkabugla/KubernetesLandingPage" target="_blank">
+                <div class="kubernetes-portfolio"></div>
+                <div class="description">
+                    <p>Kubernetes Landing Page</p>
+                    <p> jQuery | Bootstrap </p>
+                </div>
+              </a>
+
+              <a href="https://agnieszkabugla.github.io/pokemonordutchvillage/" target="_blank">
+                <div class="pokemon"></div>
+                <div class="description">
+                    <p>Pokemon or a Dutch village?</p>
+                    <p> Vanilla JS | CSS | HTML </p>
+                </div>
+              </a>
             </div>
-            <div class="container">
+          <div class="container">
               <div class="triangle"></div>
           </div>
         </div>

@@ -38,7 +38,7 @@ footer {
   p {
     margin: 0;
     text-align: center;
-    &:before {
+    &:last-child:before {
       content: "\00A9";
     }
   }
