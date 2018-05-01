@@ -96,6 +96,10 @@ hr {
   padding-bottom: 20px;
   border-top: 1px solid $white;
 }
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
 // SLANTED DIVS
 .container {
   box-sizing: border-box;
@@ -129,6 +133,34 @@ hr {
   }
 }
 
+.logo {
+  display: table-cell;
+  vertical-align: middle;
+  height: 50px;
+  float: left;
+  font-family: 'Lobster', cursive;
+  font-size: 2.4rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover {
+    color: $magenta;
+  }
+}
+
+.link {
+  @extend p;
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background-color: $white
+}
 
 /* RESPONSIVE FONT SIZES*/
 @media all and (min-width: 1480px) {

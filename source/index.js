@@ -137,7 +137,7 @@ $(document).ready(function(){
       scrollTop: $(".layer").offset().top + (offset)
     }, speed);
     $(".header ul").removeClass("show-menu");
-
+    $(".header div.btn").removeClass("cross");
   });
 
   // on about click, scroll to aboutMe
@@ -153,6 +153,7 @@ $(document).ready(function(){
       scrollTop: $(".aboutMe").offset().top + (offset)
     }, speed);
     $(".header ul").removeClass("show-menu");
+    $(".header div.btn").removeClass("cross");
   });
   // on work click, scroll to recentWork
   $(".work").on("click", function(e) {
@@ -167,6 +168,7 @@ $(document).ready(function(){
       scrollTop: $(".recent").offset().top + (offset)
     }, speed);
     $(".header ul").removeClass("show-menu");
+    $(".header div.btn").removeClass("cross");
   });
   // on contact click, scroll to aboutMe
   $(".cont").on("click", function(e) {
@@ -181,6 +183,7 @@ $(document).ready(function(){
       scrollTop: $(".contact").offset().top + (offset)
     }, speed);
     $(".header ul").removeClass("show-menu");
+    $(".header div.btn").removeClass("cross");
   });
   // end of menu navigation
 });

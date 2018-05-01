@@ -1,0 +1,45 @@
+footer {
+  background: $grey;
+  .footer-logo {
+    @extend .logo;
+    width: 100%;
+    text-align: center;
+    color: $white;
+    padding: 50px 0 50px 0;
+  }
+  a.tel, a.email {
+    @extend .link;
+    color: $white;
+    text-align: center;
+    &:hover {
+      color: $blue;
+    }
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  .icon {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    a {
+      color: $grey;
+      align-self: center;
+      font-size: 30px;
+    }
+    &:hover {
+      background-color: $blue;
+    }
+  }
+  p {
+    margin: 0;
+    text-align: center;
+    &:before {
+      content: "\00A9";
+    }
+  }
+}

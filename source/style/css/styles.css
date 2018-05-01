@@ -6,7 +6,7 @@ Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, .link, footer a.tel, footer a.email, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
@@ -173,7 +173,7 @@ h4 {
   margin: 4% 5%;
 }
 
-p {
+p, .link, footer a.tel, footer a.email {
   color: #7a89ab;
   font-weight: 300;
   letter-spacing: 1.5px;
@@ -182,7 +182,7 @@ p {
   margin: 4% 5%;
 }
 
-.subtitle, .layer .title:nth-child(3), .main .quote p {
+.subtitle, .layer .title:nth-child(3), .main .quote p, .main .quote .link, .main .quote footer a.tel, footer .main .quote a.tel, .main .quote footer a.email, footer .main .quote a.email {
   text-transform: uppercase;
   color: #7a89ab;
   font-weight: 300;
@@ -195,6 +195,11 @@ hr {
   margin: 1em auto;
   padding-bottom: 20px;
   border-top: 1px solid #ffffff;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .container {
@@ -234,6 +239,35 @@ hr {
   bottom: -20px;
 }
 
+.logo, footer .footer-logo {
+  display: table-cell;
+  vertical-align: middle;
+  height: 50px;
+  float: left;
+  font-family: 'Lobster', cursive;
+  font-size: 2.4rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo:hover, footer .footer-logo:hover {
+  color: #f9225b;
+}
+
+.link, footer a.tel, footer a.email {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background-color: #ffffff;
+}
+
 /* RESPONSIVE FONT SIZES*/
 @media all and (min-width: 1480px) {
   body {
@@ -263,7 +297,7 @@ hr {
   body {
     font-size: 15px;
   }
-  p {
+  p, .link, footer a.tel, footer a.email {
     font-size: 1em;
   }
 }
@@ -272,7 +306,7 @@ hr {
   body {
     font-size: 14px;
   }
-  p {
+  p, .link, footer a.tel, footer a.email {
     font-size: 1.1em;
     line-height: 1.4em;
   }
@@ -282,7 +316,7 @@ hr {
   body {
     font-size: 13px;
   }
-  p {
+  p, .link, footer a.tel, footer a.email {
     font-size: 1.1em;
     line-height: 1.4em;
   }
@@ -327,22 +361,6 @@ hr {
 .header li a:hover {
   color: #f9225b;
   font-weight: 300;
-}
-
-.header .logo {
-  display: table-cell;
-  vertical-align: middle;
-  height: 50px;
-  float: left;
-  font-family: 'Lobster', cursive;
-  font-size: 2.4rem;
-  padding: 10px 20px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.header .logo:hover {
-  color: #f9225b;
 }
 
 .header .btn {
@@ -493,7 +511,7 @@ hr {
   margin-top: -1px;
 }
 
-.main .whyWork p:last-of-type, .main .aboutMe p:last-of-type, .main .recent p:last-of-type {
+.main .whyWork p:last-of-type, .main .whyWork .link:last-of-type, .main .whyWork footer a.tel:last-of-type, footer .main .whyWork a.tel:last-of-type, .main .whyWork footer a.email:last-of-type, footer .main .whyWork a.email:last-of-type, .main .aboutMe p:last-of-type, .main .aboutMe .link:last-of-type, .main .aboutMe footer a.tel:last-of-type, footer .main .aboutMe a.tel:last-of-type, .main .aboutMe footer a.email:last-of-type, footer .main .aboutMe a.email:last-of-type, .main .recent p:last-of-type, .main .recent .link:last-of-type, .main .recent footer a.tel:last-of-type, footer .main .recent a.tel:last-of-type, .main .recent footer a.email:last-of-type, footer .main .recent a.email:last-of-type {
   padding-bottom: 10px;
 }
 
@@ -540,7 +558,7 @@ hr {
   font-size: 3em;
 }
 
-.main .quote p {
+.main .quote p, .main .quote .link, .main .quote footer a.tel, footer .main .quote a.tel, .main .quote footer a.email, footer .main .quote a.email {
   margin: 0 5%;
   text-align: center;
 }
@@ -649,6 +667,72 @@ hr {
   color: #f9225b;
 }
 
+footer {
+  background: #1d2028;
+}
+
+footer .footer-logo {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  padding: 50px 0 50px 0;
+}
+
+footer a.tel, footer a.email {
+  color: #ffffff;
+  text-align: center;
+}
+
+footer a.tel:hover, footer a.email:hover {
+  color: #7a89ab;
+}
+
+footer .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px auto;
+}
+
+footer .icon {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+footer .icon a {
+  color: #1d2028;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 30px;
+}
+
+footer .icon:hover {
+  background-color: #7a89ab;
+}
+
+footer p, footer .link, footer a.tel, footer a.email {
+  margin: 0;
+  text-align: center;
+}
+
+footer p:before, footer .link:before, footer a.tel:before, footer a.email:before {
+  content: "\00A9";
+}
+
 @media only screen and (min-width: 560px) {
   .col-m-1 {
     width: 8.33%;
@@ -696,7 +780,7 @@ hr {
   .layer .title h1 {
     font-size: 5rem;
   }
-  .main .aboutMe h2, .main .aboutMe h4, .main .aboutMe p, .main .whyWork h2, .main .whyWork h4, .main .whyWork p, .main .recent h2, .main .recent h4, .main .recent p {
+  .main .aboutMe h2, .main .aboutMe h4, .main .aboutMe p, .main .aboutMe .link, .main .aboutMe footer a.tel, footer .main .aboutMe a.tel, .main .aboutMe footer a.email, footer .main .aboutMe a.email, .main .whyWork h2, .main .whyWork h4, .main .whyWork p, .main .whyWork .link, .main .whyWork footer a.tel, footer .main .whyWork a.tel, .main .whyWork footer a.email, footer .main .whyWork a.email, .main .recent h2, .main .recent h4, .main .recent p, .main .recent .link, .main .recent footer a.tel, footer .main .recent a.tel, .main .recent footer a.email, footer .main .recent a.email {
     margin: 2% 10%;
   }
   .main .whyWork .round {
@@ -748,7 +832,7 @@ hr {
     width: 100%;
   }
   /*-------------------NAVBAR-------------------*/
-  .header .logo {
+  .header .logo, .header footer .footer-logo, footer .header .footer-logo {
     height: 84px;
     font-size: 4rem;
   }
