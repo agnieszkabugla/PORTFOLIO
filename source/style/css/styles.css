@@ -534,16 +534,14 @@ a {
 }
 
 .main .recent .portfolio {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-columns: 100%;
+  grid-template-columns: 100%;
 }
 
 .main .recent .portfolio a {
   position: relative;
-}
-
-.main .recent .portfolio a:hover .description {
-  opacity: 1;
 }
 
 .main .recent .portfolio > a div:first-child {
@@ -571,21 +569,11 @@ a {
   bottom: 0;
   width: 100%;
   background-color: rgba(29, 32, 40, 0.7);
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .main .recent .portfolio .description p, .main .recent .portfolio .description .link, .main .recent .portfolio .description footer a.tel, footer .main .recent .portfolio .description a.tel, .main .recent .portfolio .description footer a.email, footer .main .recent .portfolio .description a.email {
   color: #ffffff;
   font-weight: 800;
-}
-
-.main .recent .triangle {
-  border-right: 0px solid;
-  border-bottom: 100px solid #1d2028;
-  border-left: 100vw solid #96c577;
-  border-top: 0px solid;
 }
 
 .main .quote {
@@ -916,6 +904,21 @@ footer p:last-child:before, footer .link:last-child:before, footer a.tel:last-ch
   }
   .content .contact .form .text, .content .contact .form .email, .content .contact .form .msg, .content .contact .form button {
     width: 60%;
+  }
+  /*--------------------- MAIN-----------------*/
+  .main .recent .portfolio {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .main .recent .portfolio a:hover .description {
+    opacity: 1;
+  }
+  .main .recent .portfolio .description {
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 }
 /*# sourceMappingURL=styles.css.map */
