@@ -42,6 +42,24 @@
   .background {
     background-image: url(../photos/backgroundDark.jpg);
   }
+
+  /*--------------------- MAIN-----------------*/
+  .main .recent .portfolio {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 25% 25%;
+    a:hover {
+      .description {
+        opacity: 1;
+      }
+    }
+    .description {
+      opacity: 0;
+      transition: 0.5s;
+    }
+  }
+
   .content {
     .layer {
       padding-top: 15%;
@@ -59,22 +77,6 @@
       .text, .email, .msg, button {
         width: 60%;
       }
-    }
-  }
-  /*--------------------- MAIN-----------------*/
-  .main .recent .portfolio {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 25% 25% 25% 25%;
-    grid-template-columns: 25% 25% 25% 25%;
-    a:hover {
-      .description {
-        opacity: 1;
-      }
-    }
-    .description {
-      opacity: 0;
-      transition: 0.5s;
     }
   }
 
