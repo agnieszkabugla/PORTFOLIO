@@ -268,7 +268,7 @@ a {
   background-color: #ffffff;
 }
 
-.picture, .main .recent .portfolio > a div:first-child {
+.picture, .main .aboutMe .photo:before, .main .recent .portfolio > a div:first-child {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -461,6 +461,35 @@ a {
 
 .main .aboutMe {
   background-color: #1d2028;
+}
+
+.main .aboutMe .photo {
+  background-color: #f9225b;
+  width: 114px;
+  height: 114px;
+  float: left;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+          shape-outside: circle(50% at 50% 50%);
+  margin: 10px;
+  position: relative;
+}
+
+.main .aboutMe .photo:before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  background-image: url("../photos/AgnieszkaBugla.jpg");
+  background-position: 0 -10px;
+  float: left;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+          shape-outside: circle(50% at 50% 50%);
 }
 
 .main .aboutMe .triangle {
@@ -812,6 +841,15 @@ footer p:last-child:before, footer .link:last-child:before, footer a.tel:last-ch
   }
   .main .aboutMe h2, .main .aboutMe h4, .main .aboutMe p, .main .aboutMe .link, .main .aboutMe footer a.tel, footer .main .aboutMe a.tel, .main .aboutMe footer a.email, footer .main .aboutMe a.email, .main .whyWork h2, .main .whyWork h4, .main .whyWork p, .main .whyWork .link, .main .whyWork footer a.tel, footer .main .whyWork a.tel, .main .whyWork footer a.email, footer .main .whyWork a.email, .main .recent h2, .main .recent h4, .main .recent p, .main .recent .link, .main .recent footer a.tel, footer .main .recent a.tel, .main .recent footer a.email, footer .main .recent a.email {
     margin: 2% 10%;
+  }
+  .main .aboutMe .photo {
+    margin-top: -100px;
+    width: 214px;
+    height: 214px;
+  }
+  .main .aboutMe .photo:before {
+    width: 200px;
+    height: 200px;
   }
   .main .whyWork .round {
     width: 30%;

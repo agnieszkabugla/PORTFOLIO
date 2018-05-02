@@ -7,6 +7,33 @@
   width: 100%;
   .aboutMe {
     background-color: $grey;
+    .photo {
+      background-color: $magenta;
+      width: 114px;
+      height: 114px;
+      float: left;
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      margin: 10px;
+      position: relative;
+    }
+    .photo:before {
+      content:'';
+      width: 100px;
+      height: 100px;
+      @extend .picture;
+      background-image: url("../photos/AgnieszkaBugla.jpg");
+      background-position: 0 -10px;
+      float: left;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+    }
+
     // slanted div
     .triangle {
       border-right: 0px solid;

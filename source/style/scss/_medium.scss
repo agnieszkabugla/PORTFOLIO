@@ -28,6 +28,18 @@
         margin: $gutter 10%;
       }
     }
+    .aboutMe {
+      .photo {
+        //margin: 6px 6px 6px 13%;
+        margin-top: -100px;
+        width: 214px;
+        height: 214px;
+      }
+      .photo:before {
+        width: 200px;
+        height: 200px;
+      }
+    }
     .whyWork {
       .round {
         width: 30%;
