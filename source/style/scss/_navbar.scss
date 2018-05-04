@@ -30,6 +30,12 @@
       font-size: 3rem;
       font-weight: 400;
       text-decoration: none;
+      -webkit-transition:
+        color 500ms ease-out,
+        font-weight 500ms ease-out;
+      transition:
+        color 500ms ease-out,
+        font-weight 500ms ease-out;
       &:hover {
         color: $magenta;
         font-weight: 300;
@@ -53,19 +59,6 @@
     }
     .cross {
       margin-top: 0;
-      // .bar1 {
-      //   width: 25px;
-      //   -webkit-transform: rotate(45deg) translateY(19px) translateX(8px);
-      //   transform: rotate(45deg) translateY(19px) translateX(8px);
-      // }
-      // .bar2 {
-      //   opacity: 0;
-      // }
-      // .bar3 {
-      //   width: 25px;
-      //   -webkit-transform: rotate(135deg) translateY(-4px) translateX(-9px);
-      //   transform: rotate(-45deg) translateY(-4px) translateX(-9px);
-      // }
       .bar1, .bar2, .bar3 {
         display: none;
       }

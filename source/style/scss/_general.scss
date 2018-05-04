@@ -122,7 +122,7 @@ a {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 0.3s;
+  transition: all 500ms;
   cursor: pointer;
   &:hover {
     border-left: 40px solid transparent;
@@ -143,6 +143,8 @@ a {
   padding: 10px 20px;
   text-decoration: none;
   text-transform: uppercase;
+  -webkit-transition: color 500ms ease-out;
+  transition: color 500ms ease-out;
   &:hover {
     color: $magenta;
   }

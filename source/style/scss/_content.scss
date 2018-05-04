@@ -9,16 +9,15 @@
     background-color: $grey;
     .photo {
       @extend .picture;
-      background-image: url("../photos/AgnieszkaBugla.jpg");
-      background-position: 0 -10px;
+      background-image: url("../photos/AgnieszkaBugla2.png");
+      background-size: 110%;
+      background-position: 0 -7px;
       border: 7px solid $magenta;
       border-radius: 50%;
       width: 114px;
       height: 114px;
-      float: left;
-      shape-outside: circle(50% at 50% 50%);
-      margin: 10px;
-      position: relative;
+      margin: 10px auto;
+      display: inline-block;
     }
 
     // slanted div
@@ -202,8 +201,14 @@
         letter-spacing: 4px;
         font-size: 1.2em;
         cursor: pointer;
+        -webkit-transition:
+          background-color 500ms ease-out,
+          color  500ms ease-out;
+        transition:
+          background-color 500ms ease-out,
+          color  500ms ease-out;
         &:hover {
-          background: $white;
+          background-color: $white;
           color: $magenta;
         }
       }

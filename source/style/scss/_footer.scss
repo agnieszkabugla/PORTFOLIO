@@ -11,6 +11,8 @@ footer {
     @extend .link;
     color: $white;
     text-align: center;
+    -webkit-transition: color  500ms ease-out;
+    transition: color  500ms ease-out;
     &:hover {
       color: $blue;
     }
@@ -26,6 +28,8 @@ footer {
     display: flex;
     justify-content: center;
     align-content: center;
+    -webkit-transition: background-color  500ms ease-out;
+    transition: background-color  500ms ease-out;
     a {
       color: $grey;
       align-self: center;

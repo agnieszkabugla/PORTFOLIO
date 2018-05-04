@@ -56,7 +56,7 @@
     }
     .description {
       opacity: 0;
-      transition: 0.5s;
+      transition: opacity 500ms ease-out;
     }
   }
 

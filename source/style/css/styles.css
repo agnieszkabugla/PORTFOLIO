@@ -226,8 +226,8 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
   cursor: pointer;
 }
 
@@ -249,6 +249,8 @@ a {
   padding: 10px 20px;
   text-decoration: none;
   text-transform: uppercase;
+  -webkit-transition: color 500ms ease-out;
+  transition: color 500ms ease-out;
 }
 
 .logo:hover, footer .footer-logo:hover {
@@ -362,6 +364,8 @@ a {
   font-size: 3rem;
   font-weight: 400;
   text-decoration: none;
+  -webkit-transition: color 500ms ease-out, font-weight 500ms ease-out;
+  transition: color 500ms ease-out, font-weight 500ms ease-out;
 }
 
 .header li a:hover {
@@ -464,17 +468,15 @@ a {
 }
 
 .main .aboutMe .photo {
-  background-image: url("../photos/AgnieszkaBugla.jpg");
-  background-position: 0 -10px;
+  background-image: url("../photos/AgnieszkaBugla2.png");
+  background-size: 110%;
+  background-position: 0 -7px;
   border: 7px solid #f9225b;
   border-radius: 50%;
   width: 114px;
   height: 114px;
-  float: left;
-  -webkit-shape-outside: circle(50% at 50% 50%);
-          shape-outside: circle(50% at 50% 50%);
-  margin: 10px;
-  position: relative;
+  margin: 10px auto;
+  display: inline-block;
 }
 
 .main .aboutMe .triangle {
@@ -704,10 +706,12 @@ a {
   letter-spacing: 4px;
   font-size: 1.2em;
   cursor: pointer;
+  -webkit-transition: background-color 500ms ease-out, color  500ms ease-out;
+  transition: background-color 500ms ease-out, color  500ms ease-out;
 }
 
 .main .contact div button:hover {
-  background: #ffffff;
+  background-color: #ffffff;
   color: #f9225b;
 }
 
@@ -725,6 +729,8 @@ footer .footer-logo {
 footer a.tel, footer a.email {
   color: #ffffff;
   text-align: center;
+  -webkit-transition: color  500ms ease-out;
+  transition: color  500ms ease-out;
 }
 
 footer a.tel:hover, footer a.email:hover {
@@ -755,6 +761,8 @@ footer .icon {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-transition: background-color  500ms ease-out;
+  transition: background-color  500ms ease-out;
 }
 
 footer .icon a {
@@ -924,8 +932,8 @@ footer p:last-child:before, footer .link:last-child:before, footer a.tel:last-ch
   }
   .main .recent .portfolio .description {
     opacity: 0;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: opacity 500ms ease-out;
+    transition: opacity 500ms ease-out;
   }
   .content .layer {
     padding-top: 15%;
