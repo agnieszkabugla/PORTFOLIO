@@ -28,44 +28,48 @@ $( window ).resize(function() {
 
 $(document).ready(function(){
   detectFormat();
+
   // EMAIL SENDING
   $("button").click(function() {
-    $("input").each(function() {
-      if($(this).val() != '' && $("textarea").val() != '') {
-        var email = $("#mail").val();
-        var name = $("#name").val();
-        var message = $("#msg").val();
-        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        if (filter.test(email) == true) {
-          var dataToSend = {
-            email: email,
-            name: name,
-            message: message
-          };
-          $.ajax({
-            type: "POST",
-            url: "/sendMail",
-            // The key needs to match your method's input parameter (case-sensitive).
-            data: JSON.stringify(dataToSend),
-            contentType: "application/json",
-            dataType: "json"
-          })
-          .done(function() {
-            alert("success");
-          })
-          .fail(function(data) {
-            alert("error");
-          })
-          .always(function() {
-            alert("completed");
+    if($(".form #name").val() != '' && $(".form #mail").val() != '' && $("textarea").val() != '') {
+      var email = $("#mail").val();
+      var name = $("#name").val();
+      var message = $("#msg").val();
+      var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if (filter.test(email) == true) {
+        var dataToSend = {
+          email: email,
+          name: name,
+          message: message
+        };
+        $.ajax({
+          type: "POST",
+          url: "/sendMail",
+          // The key needs to match your method's input parameter (case-sensitive).
+          data: JSON.stringify(dataToSend),
+          contentType: "application/json",
+          dataType: "json"
+        })
+        .done(function() {
+          $(":input").val("");
+          $(".success").addClass("visible").delay(5000).queue(function(next){
+            $(".visible").fadeOut();
+            next();
           });
-        } else {
-          alert("wrong email address");
-        }
+          $(".failure, .wrong-email, .not-all-fields-filled").removeClass("visible");
+        })
+        .fail(function(data) {
+          $(".failure").addClass("visible");
+          $(".success, .wrong-email, .not-all-fields-filled").removeClass("visible");
+        })
       } else {
-        alert("not all fields are filled")
+        $(".wrong-email").addClass("visible");
+        $(".failure, .not-all-fields-filled").removeClass("visible");
       }
-    });
+    } else {
+      $(".not-all-fields-filled").addClass("visible");
+      $(".failure, .wrong-email").removeClass("visible");
+    }
   });
 
   // ANIMATIONS

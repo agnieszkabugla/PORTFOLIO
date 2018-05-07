@@ -171,7 +171,7 @@
     }
     .form {
       width: 100%;
-      .text, .email, .msg {
+      .text, .email, .msg, .success, .failure {
         width: 80%;
         margin: 5% auto;
         input, textarea {
@@ -185,6 +185,21 @@
         ::-moz-placeholder { /* Firefox 19+ */ color: $black; opacity: 1; }
         :-ms-input-placeholder { /* IE 10+ */ color: $black; opacity: 1; }
         :-moz-placeholder { /* Firefox 18- */ color: $black; opacity: 1; }
+      }
+      .wrong-email p, .not-all-fields-filled p, .success p, .failure p {
+        font-weight: 600;
+      }
+      .wrong-email, .not-all-fields-filled, .success, .failure {
+        display: none;
+      }
+      .visible {
+        display: block;
+      }
+      .wrong-email p, .not-all-fields-filled p, .failure p {
+        color: $magenta;
+      }
+      .success p {
+        color: $black;
       }
     }
     div {

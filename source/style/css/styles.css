@@ -655,12 +655,12 @@ a {
   width: 100%;
 }
 
-.main .contact .form .text, .main .contact .form .email, .main .contact .form .msg {
+.main .contact .form .text, .main .contact .form .email, .main .contact .form .msg, .main .contact .form .success, .main .contact .form .failure {
   width: 80%;
   margin: 5% auto;
 }
 
-.main .contact .form .text input, .main .contact .form .text textarea, .main .contact .form .email input, .main .contact .form .email textarea, .main .contact .form .msg input, .main .contact .form .msg textarea {
+.main .contact .form .text input, .main .contact .form .text textarea, .main .contact .form .email input, .main .contact .form .email textarea, .main .contact .form .msg input, .main .contact .form .msg textarea, .main .contact .form .success input, .main .contact .form .success textarea, .main .contact .form .failure input, .main .contact .form .failure textarea {
   border-width: 0px;
   width: 100%;
   color: #191c23;
@@ -668,28 +668,48 @@ a {
   outline: none;
 }
 
-.main .contact .form .text ::-webkit-input-placeholder, .main .contact .form .email ::-webkit-input-placeholder, .main .contact .form .msg ::-webkit-input-placeholder {
+.main .contact .form .text ::-webkit-input-placeholder, .main .contact .form .email ::-webkit-input-placeholder, .main .contact .form .msg ::-webkit-input-placeholder, .main .contact .form .success ::-webkit-input-placeholder, .main .contact .form .failure ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #191c23;
   opacity: 1;
 }
 
-.main .contact .form .text ::-moz-placeholder, .main .contact .form .email ::-moz-placeholder, .main .contact .form .msg ::-moz-placeholder {
+.main .contact .form .text ::-moz-placeholder, .main .contact .form .email ::-moz-placeholder, .main .contact .form .msg ::-moz-placeholder, .main .contact .form .success ::-moz-placeholder, .main .contact .form .failure ::-moz-placeholder {
   /* Firefox 19+ */
   color: #191c23;
   opacity: 1;
 }
 
-.main .contact .form .text :-ms-input-placeholder, .main .contact .form .email :-ms-input-placeholder, .main .contact .form .msg :-ms-input-placeholder {
+.main .contact .form .text :-ms-input-placeholder, .main .contact .form .email :-ms-input-placeholder, .main .contact .form .msg :-ms-input-placeholder, .main .contact .form .success :-ms-input-placeholder, .main .contact .form .failure :-ms-input-placeholder {
   /* IE 10+ */
   color: #191c23;
   opacity: 1;
 }
 
-.main .contact .form .text :-moz-placeholder, .main .contact .form .email :-moz-placeholder, .main .contact .form .msg :-moz-placeholder {
+.main .contact .form .text :-moz-placeholder, .main .contact .form .email :-moz-placeholder, .main .contact .form .msg :-moz-placeholder, .main .contact .form .success :-moz-placeholder, .main .contact .form .failure :-moz-placeholder {
   /* Firefox 18- */
   color: #191c23;
   opacity: 1;
+}
+
+.main .contact .form .wrong-email p, .main .contact .form .wrong-email .link, .main .contact .form .wrong-email footer a.tel, footer .main .contact .form .wrong-email a.tel, .main .contact .form .wrong-email footer a.email, footer .main .contact .form .wrong-email a.email, .main .contact .form .not-all-fields-filled p, .main .contact .form .not-all-fields-filled .link, .main .contact .form .not-all-fields-filled footer a.tel, footer .main .contact .form .not-all-fields-filled a.tel, .main .contact .form .not-all-fields-filled footer a.email, footer .main .contact .form .not-all-fields-filled a.email, .main .contact .form .success p, .main .contact .form .success .link, .main .contact .form .success footer a.tel, footer .main .contact .form .success a.tel, .main .contact .form .success footer a.email, footer .main .contact .form .success a.email, .main .contact .form .failure p, .main .contact .form .failure .link, .main .contact .form .failure footer a.tel, footer .main .contact .form .failure a.tel, .main .contact .form .failure footer a.email, footer .main .contact .form .failure a.email {
+  font-weight: 600;
+}
+
+.main .contact .form .wrong-email, .main .contact .form .not-all-fields-filled, .main .contact .form .success, .main .contact .form .failure {
+  display: none;
+}
+
+.main .contact .form .visible {
+  display: block;
+}
+
+.main .contact .form .wrong-email p, .main .contact .form .wrong-email .link, .main .contact .form .wrong-email footer a.tel, footer .main .contact .form .wrong-email a.tel, .main .contact .form .wrong-email footer a.email, footer .main .contact .form .wrong-email a.email, .main .contact .form .not-all-fields-filled p, .main .contact .form .not-all-fields-filled .link, .main .contact .form .not-all-fields-filled footer a.tel, footer .main .contact .form .not-all-fields-filled a.tel, .main .contact .form .not-all-fields-filled footer a.email, footer .main .contact .form .not-all-fields-filled a.email, .main .contact .form .failure p, .main .contact .form .failure .link, .main .contact .form .failure footer a.tel, footer .main .contact .form .failure a.tel, .main .contact .form .failure footer a.email, footer .main .contact .form .failure a.email {
+  color: #f9225b;
+}
+
+.main .contact .form .success p, .main .contact .form .success .link, .main .contact .form .success footer a.tel, footer .main .contact .form .success a.tel, .main .contact .form .success footer a.email, footer .main .contact .form .success a.email {
+  color: #191c23;
 }
 
 .main .contact div {
@@ -846,10 +866,10 @@ footer p:last-child:before, footer .link:last-child:before, footer a.tel:last-ch
   .main .whyWork .round {
     width: 30%;
   }
-  .main .contact .form .text, .main .contact .form .email, .main .contact .form .msg {
+  .main .contact .form .text, .main .contact .form .email, .main .contact .form .msg, .main .contact .form .success, .main .contact .form .failure {
     margin: 2% auto;
   }
-  .main .contact .form .text input, .main .contact .form .text textarea, .main .contact .form .email input, .main .contact .form .email textarea, .main .contact .form .msg input, .main .contact .form .msg textarea {
+  .main .contact .form .text input, .main .contact .form .text textarea, .main .contact .form .email input, .main .contact .form .email textarea, .main .contact .form .msg input, .main .contact .form .msg textarea, .main .contact .form .success input, .main .contact .form .success textarea, .main .contact .form .failure input, .main .contact .form .failure textarea {
     font-size: 20px;
   }
 }
@@ -947,7 +967,7 @@ footer p:last-child:before, footer .link:last-child:before, footer a.tel:last-ch
   .content .contact .beforeForm {
     padding: 0 15%;
   }
-  .content .contact .form .text, .content .contact .form .email, .content .contact .form .msg, .content .contact .form button {
+  .content .contact .form .text, .content .contact .form .email, .content .contact .form .msg, .content .contact .form button, .content .contact .form .success, .content .contact .form .failure {
     width: 60%;
   }
 }

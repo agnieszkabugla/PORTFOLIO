@@ -43,7 +43,7 @@
       }
     }
     .contact .form {
-      .text, .email, .msg {
+      .text, .email, .msg, .success, .failure  {
         margin: $gutter auto;
         input, textarea {
           font-size: 20px;
