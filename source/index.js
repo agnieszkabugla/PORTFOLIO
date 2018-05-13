@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import jQuery from 'jquery';
+import $ from 'jquery';
 
 var mobile;
 var tablet;
