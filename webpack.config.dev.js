@@ -1,8 +1,9 @@
-import webpack from 'webpack'; 
+import webpack from 'webpack';
 import path from 'path';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 
 const config = {
+  mode: 'development',
   context: path.resolve(__dirname, './source/'),
   entry: {
     app: './index.js'
@@ -27,15 +28,15 @@ const config = {
   ],
   module: {
     rules: [
-      { 
-        test: /\.js$/, 
-        include: path.join(__dirname, './source/'), 
-        exclude: path.join(__dirname, './node_modules/'), 
-        use: {loader: 'babel-loader'} 
+      {
+        test: /\.js$/,
+        include: path.join(__dirname, './source/'),
+        exclude: path.join(__dirname, './node_modules/'),
+        use: {loader: 'babel-loader'}
       }
     ]
   }
-    
+
 };
 
-module.exports = config; 
+module.exports = config;
